@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "RuntimeLog.h"
-
+#import "UIView+Dragable.h"
 
 @interface ViewController ()
 
@@ -18,6 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self.view setDragable:YES];
 }
 
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
