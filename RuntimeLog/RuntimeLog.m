@@ -24,6 +24,16 @@
         //     NSLog(@"%s: %s",memberType,memberName);
     }
     
+    /*
+      //下面方法获取的属性比较多，重复比较多
+        objc_property_t * propty = class_copyPropertyList(targetClass, &count);
+        NSString * string = @"";
+        for (int i = 0 ; i < count; i++) {
+            const char * memberName = property_getName(propty[i]);
+            const char * memberType = property_getAttributes(propty[i]);
+            string = [string stringByAppendingString:[NSString stringWithFormat:@"%d %s: %s\n",i,memberType,memberName]];
+        }
+     */
     
     NSLog(@"=======properties=======count======: %d",count); //
     NSLog(@"%@",string);
